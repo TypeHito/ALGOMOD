@@ -80,6 +80,10 @@ uz = {
         "to": " - "
     },
     "close": {
+        "from": r"закрылся",
+        "to": "yopildi"
+    },
+    "closes": {
         "from": r"закрылись",
         "to": "yopildi"
     },
