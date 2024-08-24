@@ -1,5 +1,3 @@
-
-from lang import uz
 import re
 
 
@@ -26,8 +24,8 @@ def remove_urls(text):
     return re.sub(url_regex, "", text)
 
 
-def translate(text):
+async def translate(text, language):
     text = remove_urls(text)
-    for key in uz:
-        text = replace_text(text, uz[key]['from'], uz[key]['to'])
+    for key in language:
+        text = replace_text(text, language[key]['from'], language[key]['to'])
     return text
