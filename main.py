@@ -28,7 +28,7 @@ async def message_handler(client, messsage):
     except Exception as err:
         print(err)
         await app.send_message(const.ADMINS[0], "MMSignal: " + str(err))
-
+    # print(messsage.chat.id)
 
 print("ALGO SIGNAL MM BOT HAS BEEN STARTED!")
 app.run()

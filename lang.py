@@ -2,7 +2,7 @@ start_uz = "ALGO SIGNAL MM 📊\n\n"
 start_ru = "ALGO SIGNAL MM 📊\n\n"
 start_en = "ALGO SIGNAL MM 📊\n\n"
 end_uz_alter = "\n\n#AlgoSignal @MMFx_Signallar"
-end_uz = "\n\n#AlgoSignal @MMFx_Signallar"
+end_uz = "\n\n#AlgoSignal @MMFx_UZ"
 end_ru = "\n\n#AlgoSignal @MMFX_RU"
 end_en = "\n\n#AlgoSignal @MMFX_EN"
 
@@ -52,7 +52,7 @@ UZ = {
         "from": r"Открыть седьмую позицию -",
         "to": "Ettinchi pozitsiyani oching -"
     },
-    "volume": {
+    "lot": {
         "from": r"Объем -",
         "to": "LOT -"
     },
@@ -155,12 +155,12 @@ RU= {
         "from": r"Открыть седьмую позицию -",
         "to": "Позиция 7 -"
     },
-    "volume": {
+    "lot": {
         "from": r"Объем -",
-        "to": "Депозит -"
+        "to": "LOT -"
     },
     "currency": {
-        "from": r"Валютная пара -",
+        "from": r"Валютная пара - ",
         "to": ""
     },
     "open_price": {
@@ -177,7 +177,7 @@ RU= {
     },
     "set_to": {
         "from": r" установить на ",
-        "to": " ornatish qiymati "
+        "to": " установить на "
     },
     "area": {
         "from": r"Объем для депозита 10.000 USD",
@@ -257,12 +257,12 @@ EN = {
         "from": r"Открыть седьмую позицию -",
         "to": "Position 7 -"
     },
-    "volume": {
+    "lot": {
         "from": r"Объем -",
-        "to": "Volume -"
+        "to": "LOT -"
     },
     "currency": {
-        "from": r"Валютная пара -",
+        "from": r"Валютная пара - ",
         "to": ""
     },
     "open_price": {
@@ -287,7 +287,7 @@ EN = {
     },
     "to": {
         "from": r" на ",
-        "to": " на "
+        "to": " to "
     },
     "close": {
         "from": r"закрылся",
