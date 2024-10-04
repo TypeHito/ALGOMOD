@@ -1,5 +1,4 @@
 from pyrogram import Client
-import asyncio
 import lang
 from methods import translate, remove_urls
 import const
@@ -31,6 +30,7 @@ async def message_handler(client, messsage):
         print(err)
         await app.send_message(const.ADMINS[0], "MMSignal: " + str(err))
     # print(messsage.chat.id)
+
 
 print("ALGO SIGNAL MM BOT HAS BEEN STARTED!")
 app.run()

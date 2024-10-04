@@ -20,12 +20,14 @@ def remove_urls(text):
     Returns:
         Строка текста без ссылок.
     """
-    url_regex = r"(?:https?://)?(?:www\.)?([^\s\/]+)\.[^\s\/]+$"
+    url_regex = r"(?:https?://)?(?:www\.)?([^\s\/]+)\.[^\s\/]"
+    t_regex = r"t\.me\/(.+)"
     user_regex = r"@"
     url_detect = re.search(url_regex, text)
-
+    t_detect = re.search(t_regex, text)
     user_detect = re.search(user_regex, text)
-    if url_detect or user_detect:
+
+    if url_detect or user_detect or t_detect:
         return True
     else:
         return False
@@ -35,5 +37,4 @@ async def translate(text, language):
     for key in language:
         text = replace_text(text, language[key]['from'], language[key]['to'])
     return text
-
 
