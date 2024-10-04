@@ -1,7 +1,7 @@
 from pyrogram import Client
 import asyncio
 import lang
-from methods import translate
+from methods import translate, remove_urls
 import const
 
 
@@ -21,6 +21,8 @@ async def message_handler(client, messsage):
     try:
         if messsage.chat.id in const.VALID_CHATS:
             text = [await translate(messsage.text, i) for i in lang.langs]
+            if remove_urls(text):
+                return
             await app.send_message(const.UZ_ALTER_CHANNEL, text[0] + lang.end_uz_alter)
             await app.send_message(const.UZ_CHANNEL, text[0] + lang.end_uz)
             await app.send_message(const.RU_CHANNEL, text[1] + lang.end_ru)

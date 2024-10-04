@@ -104,7 +104,7 @@ UZ = {
     },
     "end_week": {
         "from": r" Приятных выходных!",
-        "to": " Dam olish kunlari muborak!"
+        "to": " Dam olish kunlari muborak bo’lsin!"
     },
 
 }
@@ -181,7 +181,7 @@ RU= {
     },
     "area": {
         "from": r"Объем для депозита 10.000 USD",
-        "to": "Депозита 10.000 USD"
+        "to": "Депозит 10.000 USD"
     },
     "to": {
         "from": r" на ",
