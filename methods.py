@@ -20,8 +20,8 @@ def remove_urls(text):
     Returns:
         Строка текста без ссылок.
     """
-    url_regex = r"(?:https?://)?(?:www\.)?([^\s\/]+)\.[^\s\/]"
-    t_regex = r"t\.me\/(.+)"
+    url_regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
+    t_regex = r"t\.me"
     user_regex = r"@"
     url_detect = re.search(url_regex, text)
     t_detect = re.search(t_regex, text)
