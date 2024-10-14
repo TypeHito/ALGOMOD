@@ -106,6 +106,10 @@ UZ = {
         "from": r" Приятных выходных!",
         "to": " Dam olish kunlari muborak bo’lsin!"
     },
+    "tool": {
+        "from": r"Инструмент",
+        "to": "Instrument"
+    },
 
 }
 
@@ -209,6 +213,11 @@ RU = {
         "to": " Приятных выходных!"
     },
 
+    "tool": {
+        "from": r"Инструмент",
+        "to": "Инструмент"
+    },
+
 }
 
 EN = {
@@ -309,6 +318,10 @@ EN = {
     "end_week": {
         "from": r" Приятных выходных!",
         "to": " Have a nice weekend!"
+    },
+    "tool": {
+        "from": r"Инструмент",
+        "to": "Tool"
     },
 
 }
