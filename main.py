@@ -1,6 +1,6 @@
 from pyrogram import Client
 import lang
-from methods import translate, remove_urls
+from methods import translate, remove_urls, get_gold
 import const
 
 bot_status = True
@@ -11,6 +11,8 @@ app = Client(const.APP_NAME, const.API_ID, const.API_HASH)  #me
 @app.on_message()
 async def message_handler(client, messsage):
     global bot_status
+    # print(messsage.chat.id)
+
     """
         Проверяет, является ли поступаюшай сообщения из указанных в  valid_chats.
         Args:
@@ -38,7 +40,8 @@ async def message_handler(client, messsage):
                     return await app.send_message(const.ADMINS[0], messsage.text)
 
                 text = [await translate(messsage.text, i) for i in lang.langs]
-
+                if get_gold(text[0]):
+                    await app.send_message(const.GOLD_CHANNEL, text[0][29:])
                 await app.send_message(const.UZ_ALTER_CHANNEL, text[0] + lang.end_uz_alter)
                 await app.send_message(const.UZ_CHANNEL, text[0] + lang.end_uz)
                 await app.send_message(const.RU_CHANNEL, text[1] + lang.end_ru)
@@ -47,9 +50,7 @@ async def message_handler(client, messsage):
         except Exception as err:
             print(err)
             await app.send_message(const.ADMINS[0], "MMSignal: " + str(err))
-        # print(messsage.chat.id)
 
 
 print("ALGO SIGNAL MM BOT HAS BEEN STARTED!")
 app.run()
-

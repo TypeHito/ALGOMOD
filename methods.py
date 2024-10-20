@@ -33,6 +33,16 @@ def remove_urls(text):
         return False
 
 
+def get_gold(text):
+    tool = r"GOLD"
+    tool_detect = re.search(tool, text)
+
+    if tool_detect:
+        return True
+    else:
+        return False
+
+
 async def translate(text, language):
     for key in language:
         text = replace_text(text, language[key]['from'], language[key]['to'])
