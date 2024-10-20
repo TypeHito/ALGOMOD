@@ -12,7 +12,6 @@ app = Client(const.APP_NAME, const.API_ID, const.API_HASH)  #me
 async def message_handler(client, messsage):
     global bot_status
     # print(messsage.chat.id)
-
     """
         Проверяет, является ли поступаюшай сообщения из указанных в  valid_chats.
         Args:
