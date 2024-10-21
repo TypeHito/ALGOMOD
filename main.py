@@ -34,17 +34,21 @@ async def message_handler(client, messsage):
     if bot_status:
         try:
             if messsage.chat.id in const.VALID_CHATS:
-
                 if remove_urls(messsage.text):
                     return await app.send_message(const.ADMINS[0], messsage.text)
-
                 text = [await translate(messsage.text, i) for i in lang.langs]
-                if get_gold(text[0]):
-                    await app.send_message(const.GOLD_CHANNEL, text[0][29:])
+
                 await app.send_message(const.UZ_ALTER_CHANNEL, text[0] + lang.end_uz_alter)
                 await app.send_message(const.UZ_CHANNEL, text[0] + lang.end_uz)
                 await app.send_message(const.RU_CHANNEL, text[1] + lang.end_ru)
                 await app.send_message(const.EN_CHANNEL, text[2] + lang.end_en)
+
+                if get_gold(messsage.text):
+                    try:
+                        await app.send_message(const.GOLD_CHANNEL, text[0][29:])
+                    except Exception as err:
+                        await app.send_message(const.GOLD_CHANNEL, text[0])
+
                 # await app.send_message(messsage.chat.id, text[1] + lang.end_en)
         except Exception as err:
             print(err)
