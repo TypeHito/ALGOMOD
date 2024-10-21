@@ -43,6 +43,7 @@ async def message_handler(client, messsage):
                 await app.send_message(const.RU_CHANNEL, text[1] + lang.end_ru)
                 await app.send_message(const.EN_CHANNEL, text[2] + lang.end_en)
 
+
                 if get_gold(messsage.text):
                     try:
                         await app.send_message(const.GOLD_CHANNEL, text[0][29:])
