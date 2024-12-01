@@ -7,6 +7,16 @@ end_ru = "\n\n#AlgoSignal @MMFX_RU"
 end_en = "\n\n#AlgoSignal @MMFX_EN"
 
 
+fake_new = """Pozitsiyani oching - *
+Instrument - GOLD
+LOT - *
+Ochilish narxi - *
+Foyda olish (Take profit) - *
+Majburiy depozit 10 000 USD
+
+Batafsil ma'lumot: @Bobur_Mirzo97
+"""
+
 UZ = {
     "daily": {
         "from": r"Дневной:\n",

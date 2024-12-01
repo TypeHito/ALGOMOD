@@ -2,13 +2,15 @@ from pyrogram import Client
 import lang
 from methods import translate, remove_urls, get_gold
 import const
+from pyrogram import Client, filters
 
 bot_status = True
 # app = Client("MMSignal")
 app = Client(const.APP_NAME, const.API_ID, const.API_HASH)  #me
 
 
-@app.on_message()
+@app.on_message(filters.private & filters.text)
+# @app.on_message()
 async def message_handler(client, messsage):
     global bot_status
     # print(messsage.chat.id)
@@ -47,8 +49,10 @@ async def message_handler(client, messsage):
                 if get_gold(messsage.text):
                     try:
                         await app.send_message(const.GOLD_CHANNEL, text[0][29:])
+                        await app.send_message(const.FAKE_GOLD_CHANNEL, lang.fake_new)
                     except Exception as err:
                         await app.send_message(const.GOLD_CHANNEL, text[0])
+                        await app.send_message(const.FAKE_GOLD_CHANNEL, text[0])
 
                 # await app.send_message(messsage.chat.id, text[1] + lang.end_en)
         except Exception as err:
