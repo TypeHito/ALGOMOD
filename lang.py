@@ -14,7 +14,7 @@ Ochilish narxi - *
 Foyda olish (Take profit) - *
 Majburiy depozit 10 000 USD
 
-Batafsil ma'lumot: @Bobur_Mirzo97
+Batafsil ma'lumot: @Islombek_ASTRO
 """
 
 UZ = {

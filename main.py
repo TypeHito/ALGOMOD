@@ -42,7 +42,7 @@ async def message_handler(client, messsage):
 
                 await app.send_message(const.UZ_ALTER_CHANNEL, text[0] + lang.end_uz_alter)
                 await app.send_message(const.UZ_CHANNEL, text[0] + lang.end_uz)
-                await app.send_message(const.ALGO_Helper_CHANNEL, text[0] + lang.end_uz)
+                await app.send_message(const.ALGO_VIP_CHANNEL, text[0] + "\nVIP")
                 await app.send_message(const.RU_CHANNEL, text[1] + lang.end_ru)
                 await app.send_message(const.EN_CHANNEL, text[2] + lang.end_en)
 
